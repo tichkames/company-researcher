@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Research Tool</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <h1 class="main-title">Company Research Tool</h1>
+    
+    <div class="container">
+        <div class="input-section">
+            <div class="section-header">
+                <h2>User Input</h2>
+            </div>
+            <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <input type="text" id="companyName" placeholder="Enter company name">
+            </div>
+            
+            <div class="form-group">
+                <label for="companyUrl">Company URL</label>
+                <input type="url" id="companyUrl" placeholder="Enter company website">
+            </div>
+            
+            <div class="form-group">
+                <label for="outputFormat">Output Format</label>
+                <select id="outputFormat">
+                    <option value="pdf">PDF</option>
+                    <option value="markdown">Markdown</option>
+                </select>
+            </div>
+            
+            <button onclick="startResearch()">Generate Report</button>
+            
+            <div id="cluster-selection">
+                <div class="form-group">
+                    <label for="cluster-input">Select Cluster</label>
+                    <input type="text" id="cluster-input" placeholder="Enter cluster number">
+                </div>
+                <button onclick="submitClusterSelection()">Submit Selection</button>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="section-header">
+                <h2>Progress</h2>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div class="final-report-section">
+            <div class="section-header">
+                <h2>Final Report</h2>
+                <button id="copyButton" class="copy-button" onclick="copyReport()" style="display: none;">
+                    Copy
+                </button>
+            </div>
+            <div id="report"></div>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
