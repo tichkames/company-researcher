@@ -48,8 +48,8 @@ The **Company Researcher** is an open-source tool designed for in-depth company 
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/danielleyahalom/company_researcher.git
-   cd company_researcher
+   git clone https://github.com/danielleyahalom/company-researcher.git
+   cd company-researcher
    ```
 
 2. **Create a Virtual Environment**:
